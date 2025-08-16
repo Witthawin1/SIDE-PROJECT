@@ -1,0 +1,61 @@
+/* Apple-inspired soft UI theme: airy, glassy, high-contrast text, subtle borders */
+
+:root {
+  /* Sidebar theming from shadcn sidebar primitives */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 0 0% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 240 3.7% 94%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+/* Soft page background with subtle radial washes like apple.com */
+html,
+body {
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(226, 238, 255, 0.45) 0%, rgba(226, 238, 255, 0) 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(245, 245, 247, 0.8) 0%, rgba(245, 245, 247, 0) 40%), #fbfbfd;
+}
+
+/* Softer focus ring */
+:root {
+  --ring: 215 92% 58%;
+}
+
+/* Prefer pill buttons when possible */
+.button-pill {
+  border-radius: 9999px !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* “Glassy” surface helper class for Cards and headers */
+.apple-surface {
+  background-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-color: rgba(24, 24, 27, 0.08);
+  box-shadow: 0 0 0 1px rgba(24, 24, 27, 0.04), 0 8px 24px rgba(24, 24, 27, 0.08);
+}
+
+/* Card radius a bit larger for a friendlier look */
+.rounded-apple {
+  border-radius: 16px !important;
+}
+
+/* Headings similar scale to apple.com (bigger, tighter tracking) */
+.h-apple {
+  letter-spacing: -0.01em;
+}
+
+/* Subtle separators */
+hr.apple {
+  border-color: rgba(24, 24, 27, 0.08);
+}
+
+/* Table zebra */
+.table-zebra tr:nth-child(odd) td {
+  background: rgba(249, 250, 251, 0.6);
+}
